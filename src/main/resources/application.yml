@@ -1,0 +1,18 @@
+server:
+    port: 9910
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+            base-path: "/ccbe"
+    endpoint:
+        shutdown:
+            enabled: true
+        health:
+            show-details: always
+
+config:
+    websocket:
+        subscribe: chat|notice|system
